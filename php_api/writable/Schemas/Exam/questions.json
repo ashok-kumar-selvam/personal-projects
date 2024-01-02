@@ -1,0 +1,94 @@
+{
+"type": "array",
+
+"items": {
+
+"type": "object",
+
+"properties": {
+
+"type": {
+"type": "string",
+"enum": ["single_choice", "multi_choice", "true_or_false", "match_it", "fill_the_blanks", "descriptive"]
+},
+
+"question": {
+"type": "string"
+},
+
+"options": {
+"type": "array"
+},
+
+"point": {
+"type": "number"
+},
+
+"mpoint": {
+"type": "number"
+},
+
+"description": {
+"type": "string"
+}
+},
+
+"allOf": [
+{
+"if": {
+ "properties": { "type": { "const": "single_choice"} } 
+},
+"then": {
+ "properties": { "answer": { "type": ["string", "number"] } },
+"required": ["options", "answer"]
+}
+},
+
+{
+"if": {
+ "properties": { "type": { "const": "multi_choice" }}
+},
+"then": {
+ "properties": { "answer": { "type": "array" }},
+"required": ["options", "answer"]
+}
+
+},
+
+{
+"if": {
+"properties": { "type": { "const": "true_or_false" } }
+},
+
+"then": {
+"properties": { "answer": { "type": "string" }},
+"required": ["options", "answer"]
+}
+},
+
+{
+"if": {
+"properties": { "type": { "const": "match_it" } }
+},
+"then": {
+"properties": { "answer": { "type": "object" } },
+"required": ["answer"]
+}
+},
+
+{
+"if": {
+"properties": { "type": { "const": "fill_the_blanks" } }
+},
+"then": {
+"properties": { "answer": { "type": "array" } },
+"required": ["answer"]
+}
+}
+],
+"required": ["type", "question"]
+
+}
+
+}
+

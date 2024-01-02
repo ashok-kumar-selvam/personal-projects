@@ -1,0 +1,34 @@
+ERROR - 2023-04-10 19:47:16 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-04-10 19:47:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\riyozo.com\api\app\Securities\InstructorSecurity.php(79): CodeIgniter\BaseModel->first()
+#5 C:\projects\riyozo.com\api\app\Controllers\Admin\Groups.php(25): App\Securities\InstructorSecurity->is_instructor()
+#6 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Groups->index()
+#7 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Groups))
+#8 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\riyozo.com\api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\riy...')
+#11 {main}
+ERROR - 2023-04-10 19:47:30 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-04-10 19:47:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\riyozo.com\api\app\Securities\InstructorSecurity.php(79): CodeIgniter\BaseModel->first()
+#5 C:\projects\riyozo.com\api\app\Controllers\Admin\Groups.php(25): App\Securities\InstructorSecurity->is_instructor()
+#6 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Groups->index()
+#7 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Groups))
+#8 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\riyozo.com\api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\riyozo.com\api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\riy...')
+#11 {main}

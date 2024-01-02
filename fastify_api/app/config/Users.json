@@ -1,0 +1,22 @@
+{
+  "type1": {
+    "name": "admin",
+    "alias": ["admin", "owner", "teacher", "type1"],
+    "fields": ["first_name", "last_name", "email", "password", "mobile", "status"]
+  },
+  "type2": {
+    "name": "member",
+    "alias": ["member", "follower"],
+    "fields": ["first_name", "last_name", "email", "password", "mobile", "status"]
+  },
+  "type3": {
+    "name": "temporary",
+    "alias": ["temporaryUser", "tempUser"],
+    "fields": ["name", "email", "status"]
+  },
+  "type4": {
+    "name": "anonymous",
+    "alias": ["anonymousUser"],
+    "fields": ["name"]
+  }
+}

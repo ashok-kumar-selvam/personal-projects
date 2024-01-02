@@ -1,0 +1,83 @@
+{
+  "types": {
+    "type1": {
+      "name": "single_choice",
+      "alias": ["Single Choice", "single choice", "single_choice", "Single_choice", "type1", "sc", "SingleChoice", "singleChoice"],
+      "fields": {"options": "array", "answer": "string"},
+      "entities": ["quiz", "exam"],
+      "model": {
+        "type": "single_choice",
+        "point": 1,
+        "mpoint": 0.5,
+        "explanation": "",
+        "question": "",
+        "options": ["", "", "", ""],
+        "answer": "",
+        "settings": {}
+      },
+      "example": {
+        "type": "single_choice",
+        "point": 1,
+        "mpoint": 0.5,
+        "explanation": "Delhi is the capital of modern India.",
+        "question": "What is the capital of India?",
+        "options": ["Chennai", "Bangalore", "Delhi", "Mumbai"],
+        "answer": "Delhi",
+        "settings": {}
+      }
+
+    },
+    "type2": {
+      "name": "true_or_false",
+      "alias": ["true_or_false", "type2", "true or false", "True Or False", "TrueOrFalse", "trueOrFalse", "true false", "True false", "TOF"],
+      "fields": {"options": "array", "answer": "boolean"},
+      "entities": ["quiz", "exam"],
+      "model": {
+        "type": "true_or_false",
+        "point": 1,
+        "mpoint": 0.5,
+        "explanation": "",
+        "settings": {},
+        "question": "",
+        "options": [true, false],
+        "answer": true
+      },
+      "example": {
+        "type": "true_or_false",
+        "point": 1, 
+        "mpoint": 0.5,
+        "explanation": "The earth revolves the sun.",
+        "settings": {},
+        "question": "The sun revolves the earth.",
+        "options": [true, false],
+        "answer": false
+      }
+    },
+    "type3": {
+      "name": "multi_choice",
+      "alias": ["multi_choice", "type3", "multi choice", "Multi Choice", "multiChoice", "MultiChoice", "MC"],
+      "fields": {"options": "array", "answers": "array"},
+      "entities": ["quiz", "exam"],
+      "model": {
+        "type": "multi_choice",
+        "point": 2,
+        "mpoint": 1,
+        "explanation": "",
+        "settings": {},
+        "question": "",
+        "options": ["", "", "", ""],
+        "answers": []
+      },
+      "example": {
+        "type": "multi_choice",
+        "point": 2,
+        "mpoint": 1,
+        "explanation": "There are 3 colors in India flag and White and Green are present there",
+        "settings": {},
+        "question": "Select the colors present in the Indian flag.",
+        "options": ["Yellow", "Green", "Orange", "White"],
+        "answers": ["White", "Green"]
+      }
+    }
+  }
+}

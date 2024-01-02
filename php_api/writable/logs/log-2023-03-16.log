@@ -1,0 +1,138 @@
+ERROR - 2023-03-16 07:12:02 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+ERROR - 2023-03-16 07:12:26 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:12:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:12:43 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:12:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:12 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:12 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:19 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:19 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:24 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:24 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:30 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:30 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:35 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}
+ERROR - 2023-03-16 07:13:40 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2023-03-16 07:13:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\projects\exams\exams-api\app\Controllers\Users\Instructors.php(24): CodeIgniter\BaseModel->first()
+#5 C:\projects\exams\exams-api\app\Controllers\Users.php(29): App\Controllers\Users\Instructors->getInstructor('asokmadurai@gma...')
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Users->login()
+#7 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#10 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#11 {main}

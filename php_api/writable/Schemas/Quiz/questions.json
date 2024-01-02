@@ -1,0 +1,77 @@
+{
+"type": "array",
+
+"items": {
+
+"type": "object",
+
+"properties": {
+
+"type": {
+"type": "string",
+"enum": ["single_choice", "multi_choice", "true_or_false"],
+"messages": {
+"enum": "The quiz supports only single, multi choise and true or false"
+}
+},
+
+"question": {
+"type": "string"
+},
+
+"options": {
+"type": "array"
+},
+
+"point": {
+"type": "number"
+},
+
+"mpoint": {
+"type": "number"
+},
+
+"explanation": {
+"type": "string"
+}
+},
+
+"allOf": [
+{
+"if": {
+ "properties": { "type": { "const": "single_choice"} } 
+},
+"then": {
+ "properties": { "answer": { "type": ["string", "number"] } },
+"required": ["options", "answer"]
+}
+},
+
+{
+"if": {
+ "properties": { "type": { "const": "multi_choice" }}
+},
+"then": {
+ "properties": { "answer": { "type": "array" }},
+"required": ["options", "answer"]
+}
+
+},
+
+{
+"if": {
+"properties": { "type": { "const": "true_or_false" } }
+},
+
+"then": {
+"properties": { "answer": { "type": "string" }},
+"required": ["options", "answer"]
+}
+}
+],
+"required": ["type", "question"]
+
+}
+
+}
+

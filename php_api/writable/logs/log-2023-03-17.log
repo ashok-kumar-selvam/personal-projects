@@ -1,0 +1,37 @@
+CRITICAL - 2023-03-17 16:48:11 --> Undefined property: App\Securities\InstructorSecurity::$request
+#0 C:\projects\exams\exams-api\app\Securities\InstructorSecurity.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projects\\exa...', 67, Array)
+#1 C:\projects\exams\exams-api\app\Controllers\Admin\Assignments.php(28): App\Securities\InstructorSecurity->is_instructor()
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Assignments->index()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Assignments))
+#4 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#7 {main}
+CRITICAL - 2023-03-17 17:04:21 --> Too few arguments to function App\Securities\BaseSecurity::__construct(), 0 passed in C:\projects\exams\exams-api\app\Controllers\Admin\Assignments.php on line 17 and exactly 1 expected
+#0 C:\projects\exams\exams-api\app\Controllers\Admin\Assignments.php(17): App\Securities\BaseSecurity->__construct()
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(809): App\Controllers\Admin\Assignments->__construct()
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#5 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#6 {main}
+CRITICAL - 2023-03-17 17:06:16 --> Undefined property: App\Securities\InstructorSecurity::$request
+#0 C:\projects\exams\exams-api\app\Securities\InstructorSecurity.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projects\\exa...', 67, Array)
+#1 C:\projects\exams\exams-api\app\Controllers\Admin\Assignments.php(28): App\Securities\InstructorSecurity->is_instructor()
+#2 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Assignments->index()
+#3 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Assignments))
+#4 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#7 {main}
+CRITICAL - 2023-03-17 17:20:49 --> syntax error, unexpected 'cache' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\projects\\exa...')
+#1 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\projects\exams\exams-api\public\index.php(120): CodeIgniter\CodeIgniter->run()
+#8 C:\projects\exams\exams-api\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\projects\\exa...')
+#9 {main}
