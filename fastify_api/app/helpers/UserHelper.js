@@ -63,7 +63,7 @@ const hasPermission = async function(rq, rs, fy) {
 
 const isOwner  = async function(req, mongo, cache  = false) {
   try {
-    const excludes = ['result_id'];
+    const excludes = ['result_id', 'attempt_id'];
     
     const id  = req.routerPath.match(/:(\w+)/)?.[1];
     
@@ -135,9 +135,12 @@ const authoriseAdmin = async function(req, res) {
     await req.jwtVerify();
     
 
-    if(req.user.type != 'admin' && req.user.type != 'instructor')
+    if(req.user.type != 'admin' && req.user.type != 'instructor' )
       return res.status(401).send(`You are not allowed to access this endpoint.`);
     
+    if(req.user.status != 'approved' && req.user.status != 'active')
+      return res.status(400).send(`Your account is deactivated.`);
+
     if(!await isOwner(req, this.mongo, this.cache))
       return res.status(403).send(`Unable to verify the ownership of entity.`);
     

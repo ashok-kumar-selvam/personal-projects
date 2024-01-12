@@ -1,9 +1,9 @@
 module.exports = {
-  create: require('./Create'),
-  view: require('./View'),
-  update: require('./Update'),
-  remove: require('./Remove'),
-  list: require('./List'),
-  results: require('./Results'),
-  result: require('./Result'),
+  create: require('./create'),
+  view: require('./view'),
+  update: require('./update'),
+  remove: require('./remove'),
+  list: require('./list'),
+  results: require('./results'),
+  result: require('./result'),
 }

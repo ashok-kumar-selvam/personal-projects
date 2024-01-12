@@ -5,7 +5,7 @@ const common = Joi.object({
   type: Joi.string().valid(...questionTypes).required(),
   point: Joi.number().min(1).default(1),
   mpoint: Joi.number().min(0).max(Joi.ref('point')).default(0),
-  explanation: Joi.string().default(''),
+  explanation: Joi.string().default(' ').empty(''),
   question: Joi.string().min(3).required(),
   settings: Joi.object().default({}),
 });

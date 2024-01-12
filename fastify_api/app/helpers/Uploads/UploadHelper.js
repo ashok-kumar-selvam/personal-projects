@@ -72,10 +72,11 @@ class UploadHelper {
     let newQuestions = [];
     for(let question of questions) {
       let number = question.number;
+      
       delete question['number'];
       const {error, value} = schemas[Base.getQuestionTypeKey(question.type)].validate(question, {stripUnknown: true});
       if(error)
-        return [false, `Question ${number}: `+this.getJoiErrorMessage(error)];
+        return [false, `Question ${number}: yes `+this.getJoiErrorMessage(error)];
 
       newQuestions.push(value);
     }

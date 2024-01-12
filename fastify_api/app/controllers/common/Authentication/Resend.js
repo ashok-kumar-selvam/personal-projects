@@ -1,6 +1,16 @@
+const { default: S } = require('fluent-json-schema');
 const {getKey} = require('../../../helpers/dbHelper');
 
-module.exports = async function(req, res) {
+module.exports = {
+
+  schema: {
+    params: S.object().additionalProperties(false).prop('user_id', S.string().required()),
+    response: {
+      200: S.string().const('success')
+    }
+  },
+  
+  async handler(req, res) {
     try {
       const user_id  = req.params.user_id;
       const users = this.mongo.db.collection('users');
@@ -35,3 +45,4 @@ module.exports = async function(req, res) {
       return res.status(400).send(error.message);
     }
   }
+}

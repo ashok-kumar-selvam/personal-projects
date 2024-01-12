@@ -9,7 +9,18 @@ class XlsxUploadHelper extends UploadHelper {
   //this method removes the null and empty values from each column of each row and removes the rows which have only 4 columns.
   sanitize(array) {
     
-    return array.map(row => row.filter((column, index) => (index > 3 ? (column && column !== null && column != ' '): true))).filter(row => row.length > 3);
+    
+    return array.map(row => {
+      let newArray = [...row];
+      for(let i = row.length-1; i > 0; i--) {
+        if(row[i]=== null || row[i] === undefined || row[i] === ' ')
+          delete newArray[i];
+        else 
+          break;
+      }
+      
+      return newArray;
+    }).filter(row => row.length > 3);
   }
 
   extract() {
@@ -50,7 +61,7 @@ class XlsxUploadHelper extends UploadHelper {
 
         let questions = [];
       for(let [column, row] of  this.extracted.entries()) {
-        const [number = column+1, point = 1, mpoint = 0, explanation = "", type, question] = row;
+        let [number = column+1, point = 1, mpoint = 0, explanation = "", type, question] = row;
 
         if(!type)
           return this.setError(`The question type is required in question ${number}`);
@@ -60,6 +71,9 @@ class XlsxUploadHelper extends UploadHelper {
 
         if(!question)
           return this.setError(`Please provide the question for question ${number}. `);
+
+        type = Base.getQuestionTypeName(type);
+        
         questions.push({number, point, mpoint, explanation, type, question, row});
       }
       this.questions = questions;
@@ -72,7 +86,8 @@ class XlsxUploadHelper extends UploadHelper {
 
   setOptions(question) {
     try {
-      question.options = question.type == Base.getQuestionTypeName('type1') || question.type == Base.getQuestionTypeName('type3') ? question.row.slice(6).map(item => (item?.startsWith('*') ? item.slice(1)?.trim(): item.trim())):
+      
+      question.options = question.type == Base.getQuestionTypeName('type1') || question.type == Base.getQuestionTypeName('type3') ? question.row.slice(6).map(item => (typeof item == 'string' && item?.startsWith('*') ? item.slice(1)?.trim(): item)):
         question.type == Base.getQuestionTypeName('type2') ? [true, false]: null;
 
       if(question.options && question.options.length < 2)
@@ -86,7 +101,7 @@ class XlsxUploadHelper extends UploadHelper {
 
   setAnswers(question) {
     try {
-      question.answer = question.type == Base.getQuestionTypeName('type1') ? question.row.slice(6).find(item => item.startsWith('*'))?.slice(1)?.trim():
+      question.answer = question.type == Base.getQuestionTypeName('type1') ? question.row.slice(6).find(item => item.toString().startsWith('*'))?.slice(1)?.trim():
         question.type == Base.getQuestionTypeName('type2') ? Boolean(question.row[7]?.trim()): null;
 
       if(question.answer === undefined)

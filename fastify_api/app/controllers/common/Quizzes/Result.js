@@ -51,7 +51,10 @@ module.exports = {
       const result = await db.collection('results').findOne({_id});
       if(!result)
         return res.status(404).send('Unable to find the result. ');
-  
+
+      if(result.member_id.toString() != user.uuid.toString())
+        return res.status(400).send('You cannot access this result.');
+      
       const quiz = await db.collection('quizzes').findOne({_id: new this.mongo.ObjectId(result.quiz_id)});
       const member = await db.collection('users').findOne({_id: new this.mongo.ObjectId(result.member_id)});
       result.title = quiz.title;

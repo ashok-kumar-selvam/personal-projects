@@ -15,11 +15,12 @@ module.exports = async function(fastify, opts) {
     }
   });
   
+  fastify.get('/admins', admins.view);
   fastify.get('/admins/verify/:admin_code', admins.verify);
   fastify.post('/admins/request', admins.request);
   fastify.get('/exams', entities.exams);
- fastify.get('/quizzes', entities.quizzes);
- fastify.get('/quizzes/results', entities.quizResults);
- 
+  fastify.get('/quizzes', entities.quizzes);
+  fastify.get('/quizzes/results', entities.quizResults);
+  fastify.get('/results', entities.results);
   
 }

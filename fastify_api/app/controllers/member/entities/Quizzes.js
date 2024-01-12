@@ -1,4 +1,22 @@
-module.exports = async function(req, res) {
+const { default: S } = require("fluent-json-schema");
+
+module.exports = {
+
+  schema: {
+    response: {
+      200: S.object().prop('quizzes', S.array().items(
+        S.object()
+        .prop('id', S.string())
+        .prop('title', S.string())
+        .prop('category', S.string())
+        .prop('admin', S.string())
+        .prop('created_at', S.string())
+        .prop('expiresOn', S.string())
+      ))
+    }
+  },
+  
+  async handler(req, res) {
   try {
     const member_id = new this.mongo.ObjectId(req.user.uuid);
     const quizzes = await this.mongo.db.collection('quizzes').aggregate([
@@ -25,10 +43,11 @@ module.exports = async function(req, res) {
       title: 1, _id: 0, id: '$_id', category: 1, created_at: 1, expiresOn: 1,
       
   }}]).toArray();
-    console.log('the quizzzes are ', quizzes);
+    
     
     return {quizzes};
   } catch(error) {
     return res.send(error);
   }
+}
 }

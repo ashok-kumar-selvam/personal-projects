@@ -1,4 +1,24 @@
-module.exports = async function(req, res) {
+const {default: S} = require('fluent-json-schema')
+
+module.exports = {
+
+  schema: {
+    response: {
+      200: S.object().additionalProperties(false)
+      .prop('exams', S.array().items(
+        S.object()
+        .prop('id', S.string())
+        .prop('title', S.string())
+        .prop('owner', S.string())
+        .prop('attempts', S.number())
+        .prop('start', S.string())
+        .prop('end', S.string())
+
+      ))
+    }
+  },
+
+  async handler(req, res) {
   try {
     const member_id = new this.mongo.ObjectId(req.user.uuid);
     
@@ -31,6 +51,13 @@ module.exports = async function(req, res) {
         as: 'groups'
       }},
       
+      { $lookup: {
+        from: 'users',
+        localField: 'user_id',
+        foreignField: '_id',
+        as: 'admin'
+      }},
+      { $unwind: '$admin'},
       { $match: {
         status: 'active',
         'time.start': {$lte: Math.floor(Date.now()/1000)},
@@ -42,7 +69,8 @@ module.exports = async function(req, res) {
       }},
       { $project: {
         title: '$introduction.name', id: '$_id', _id: 0,
-        end: '$time.end', 
+        end: '$time.end', start: '$time.start', attempts: '$general.attempts',
+        owner: {$ifNull: ['$admin.name', '$admin.first_name']},
       }}
       ]).toArray();
       return {exams};
@@ -50,4 +78,5 @@ module.exports = async function(req, res) {
   } catch(error) {
     return res.send(error);
   }
+}
 }
